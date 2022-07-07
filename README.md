@@ -1,4 +1,4 @@
-![image.png](attachment:image.png)
+<img src="movieIntro.png">
 # The Art of the Blockbuster
 
 **Author:** Jake Sherman
