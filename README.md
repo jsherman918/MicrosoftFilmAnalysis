@@ -18,8 +18,6 @@ Producing a movie is extremely capital intensive and unlike traditional investme
 
 Data being used comes from a csv database containing information related to production budget and worldwide gross to determine the films ROI.  This dataframe was merged with a SQL database containing runtime and genre information. The target variable is ROI or return on investment which is calculated as ((worldwide theatrical gross / production budget)*100). The analysis looks at how ROI is affected by changes in runtime, genre, and production budget.
 
-Alternatively, another dataframe was created that contained only data from films that were considered a 'success' by this analysis.  The requirement for 'success' was if a film returned double its production budget or achieved an ROI of 100%.  This method is more focused on reliability of performance and reduces emphasis on outlier returns.
-
 ## Data Preparation
 
 The IMDB SQLdatabase only contains information on films dating back to 2010 so all films prior to 2010 were dropped in order to conduct the genre and runtime analysis. Entries with no runtime or genre were also dropped.
@@ -39,8 +37,21 @@ Although production budgets have a strong correlation to worldwide gross, there 
         Blockbuster Films: $100M+
 Each tier is analyzed against ROI to determine the optimal production budget tier.
 
+## Evaluation: Runtime
+
+75-85 minute runtimes showed the highest average ROI of bins with appropriate sample size.
+![image](https://user-images.githubusercontent.com/106030704/180293926-0f0e1d41-c678-4398-a319-e4cbca54716f.png)
+
+## Evaluation: Genre
+
+The mystery genre had the highest median and mean ROI.  Its by far the best performing genre in the study with only Horror coming in anywhere close.
+
+![image](https://user-images.githubusercontent.com/106030704/180294351-403b9749-a70f-47ae-acff-743a4a9dc95a.png)
+
 ## Evaluation: Production Budget
 The lowest budget tier has the highest average ROI and lowest median ROI.
+
+![image](https://user-images.githubusercontent.com/106030704/180294708-37c70e9e-c8e8-4e37-b361-45b5a5485173.png)
 
 Low budget movies are inherently riskier than larger movies as their median return is only 110% but they also tend to offer the largest upside as hits really skew the average ROI up.  The safest investment is the blockbuster budget tier where the average returns aren't the best but the median value is the highest suggesting less volatility and a safer floor.  Blockbuster tier movies have the lowest ROI standard deviation while low budget films have the highest.
 
